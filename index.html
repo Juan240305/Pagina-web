@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resident Evil Requiem - Guía de Supervivencia</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&family=Nosifer&family=Oswald:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1 class="titulo-principal">RESIDENT EVIL REQUIEM</h1>
+        <p class="subtitulo">Guía de Zonas y Registro de Bajas</p>
+    </header>
+
+    <main id="app">
+    <section id="vista-home">
+        <h2 class="titulo-seccion">Selecciona una Zona</h2>
+        <div class="contenedor-zonas">
+            <article class="tarjeta-zona" onclick="irAZona('pueblo')">
+                <h3>El Pueblo</h3>
+                <p>Haz clic para explorar los alrededores...</p>
+            </article>
+            <article class="tarjeta-zona" onclick="irAZona('castillo')">
+                <h3>El Castillo</h3>
+                <p>Adéntrate en los dominios de la locura...</p>
+            </article>
+        </div>
+    </section>
+
+    <section id="vista-detalle" class="oculto">
+        <button id="btn-volver" onclick="volverAHome()">← Volver al mapa</button>
+        <div id="contenido-zona">
+            </div>
+    </section>
+
+    <section id="registro-muertes">
+        <h2 class="titulo-seccion">Contador de Bajas</h2>
+        <p>Total de muertes: <span id="total-muertes">0</span></p>
+        <ul id="lista-muertes"></ul>
+    </section>
+</main>
+
+    <footer>
+        <p>&copy; 2024 Guía Resident Evil - Desarrollado con JS Puro</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
