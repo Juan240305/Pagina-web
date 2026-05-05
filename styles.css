@@ -672,6 +672,8 @@ body {
 .area-card:nth-child(4) { animation-delay: 0.20s; }
 .area-card:nth-child(5) { animation-delay: 0.25s; }
 .area-card:nth-child(6) { animation-delay: 0.30s; }
+.area-card:nth-child(7) { animation-delay: 0.35s; }
+.area-card:nth-child(8) { animation-delay: 0.40s; }
 
 .area-card:hover {
   border-color: var(--red);

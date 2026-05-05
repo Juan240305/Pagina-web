@@ -25,65 +25,87 @@ const DISCORD_WEBHOOK_URL = 'TU_DISCORD_WEBHOOK_URL';
 const AREAS = [
   {
     id: 'area-01',
-    title: 'NOMBRE ÁREA 01',
-    description: 'Descripción breve del área 01. Contexto narrativo, nivel de peligro y tipo de enemigos.',
+    title: 'WRENWOOD HOTEL',
+    description: 'El brote comienza aquí. El hotel Wrenwood y sus alrededores en Elbridge son el primer escenario de la catástrofe. Explora las instalaciones, busca suministros y encuentra una salida antes de que todo colapse.',
     coverImage: '',
     zones: [
-      { id: 'z-01-01', name: 'NOMBRE ZONA 1', description: 'Descripción de qué tienes que hacer en esta zona, qué encontrarás, enemigos, puzzles, items importantes, etc.', photos: [] },
-      { id: 'z-01-02', name: 'NOMBRE ZONA 2', description: 'Descripción de la zona 2 dentro del área 01.', photos: [] },
-      { id: 'z-01-03', name: 'NOMBRE ZONA 3', description: 'Descripción de la zona 3 dentro del área 01.', photos: [] }
+      { id: 'z-01-01', name: 'ZONA 1', description: 'Descripción pendiente.', photos: [] },
+      { id: 'z-01-02', name: 'ZONA 2', description: 'Descripción pendiente.', photos: [] },
+      { id: 'z-01-03', name: 'ZONA 3', description: 'Descripción pendiente.', photos: [] }
     ]
   },
   {
     id: 'area-02',
-    title: 'NOMBRE ÁREA 02',
-    description: 'Descripción breve del área 02.',
+    title: 'RHODES HILL 1',
+    description: 'Primera incursión en el barrio residencial de Rhodes Hill. Aquí encontrarás a The Girl, figura clave en la narrativa. Procede con cautela: los infectados abundan en cada esquina.',
     coverImage: '',
     zones: [
-      { id: 'z-02-01', name: 'NOMBRE ZONA 1', description: 'Descripción de la zona 1 dentro del área 02.', photos: [] },
-      { id: 'z-02-02', name: 'NOMBRE ZONA 2', description: 'Descripción de la zona 2 dentro del área 02.', photos: [] }
+      { id: 'z-02-01', name: 'ZONA 1', description: 'Descripción pendiente.', photos: [] },
+      { id: 'z-02-02', name: 'ZONA 2', description: 'Descripción pendiente.', photos: [] }
     ]
   },
   {
     id: 'area-03',
-    title: 'NOMBRE ÁREA 03',
-    description: 'Descripción breve del área 03.',
+    title: 'RHODES HILL 2',
+    description: 'Segunda fase en Rhodes Hill. Debes localizar las piezas de cuarzo y acceder a la Oficina de Victor. Los puzzles ambientales cobran protagonismo y la presión no da tregua.',
     coverImage: '',
     zones: [
-      { id: 'z-03-01', name: 'NOMBRE ZONA 1', description: 'Descripción de la zona 1 dentro del área 03.', photos: [] },
-      { id: 'z-03-02', name: 'NOMBRE ZONA 2', description: 'Descripción de la zona 2 dentro del área 03.', photos: [] },
-      { id: 'z-03-03', name: 'NOMBRE ZONA 3', description: 'Descripción de la zona 3 dentro del área 03.', photos: [] }
+      { id: 'z-03-01', name: 'ZONA 1', description: 'Descripción pendiente.', photos: [] },
+      { id: 'z-03-02', name: 'ZONA 2', description: 'Descripción pendiente.', photos: [] },
+      { id: 'z-03-03', name: 'ZONA 3', description: 'Descripción pendiente.', photos: [] }
     ]
   },
   {
     id: 'area-04',
-    title: 'NOMBRE ÁREA 04',
-    description: 'Descripción breve del área 04.',
+    title: 'RHODES HILL 3',
+    description: 'Descenso al sótano de Rhodes Hill. La oscuridad y los espacios cerrados elevan la tensión al máximo. Gestiona bien tu munición y ten siempre una ruta de escape en mente.',
     coverImage: '',
     zones: [
-      { id: 'z-04-01', name: 'NOMBRE ZONA 1', description: 'Descripción de la zona 1 dentro del área 04.', photos: [] },
-      { id: 'z-04-02', name: 'NOMBRE ZONA 2', description: 'Descripción de la zona 2 dentro del área 04.', photos: [] }
+      { id: 'z-04-01', name: 'ZONA 1', description: 'Descripción pendiente.', photos: [] },
+      { id: 'z-04-02', name: 'ZONA 2', description: 'Descripción pendiente.', photos: [] }
     ]
   },
   {
     id: 'area-05',
-    title: 'NOMBRE ÁREA 05',
-    description: 'Descripción breve del área 05.',
+    title: 'RHODES HILL 4',
+    description: 'Tramo final en Rhodes Hill. El helipuerto y la Planta de Tratamiento de Agua son los objetivos. La infección ha mutado y los enemigos son más agresivos que nunca.',
     coverImage: '',
     zones: [
-      { id: 'z-05-01', name: 'NOMBRE ZONA 1', description: 'Descripción de la zona 1 dentro del área 05.', photos: [] },
-      { id: 'z-05-02', name: 'NOMBRE ZONA 2', description: 'Descripción de la zona 2 dentro del área 05.', photos: [] },
-      { id: 'z-05-03', name: 'NOMBRE ZONA 3', description: 'Descripción de la zona 3 dentro del área 05.', photos: [] }
+      { id: 'z-05-01', name: 'ZONA 1', description: 'Descripción pendiente.', photos: [] },
+      { id: 'z-05-02', name: 'ZONA 2', description: 'Descripción pendiente.', photos: [] },
+      { id: 'z-05-03', name: 'ZONA 3', description: 'Descripción pendiente.', photos: [] }
     ]
   },
   {
     id: 'area-06',
-    title: 'NOMBRE ÁREA 06',
-    description: 'Descripción breve del área 06.',
+    title: 'EAST RACCOON CITY',
+    description: 'Las calles del este de Raccoon City están tomadas. Navega entre vehículos abandonados, edificios derrumbados y hordas de infectados en un entorno urbano devastado.',
     coverImage: '',
     zones: [
-      { id: 'z-06-01', name: 'NOMBRE ZONA 1', description: 'Descripción de la zona 1 dentro del área 06.', photos: [] },
-      { id: 'z-06-02', name: 'NOMBRE ZONA 2', description: 'Descripción de la zona 2 dentro del área 06.', photos: [] }
+      { id: 'z-06-01', name: 'ZONA 1', description: 'Descripción pendiente.', photos: [] },
+      { id: 'z-06-02', name: 'ZONA 2', description: 'Descripción pendiente.', photos: [] }
+    ]
+  },
+  {
+    id: 'area-07',
+    title: 'RACCOON CITY CENTER',
+    description: 'El centro de la ciudad alberga la comisaría del RPD y el Orfanato. Dos localizaciones cargadas de historia y peligro. Cada sala puede esconder tanto recursos como amenazas letales.',
+    coverImage: '',
+    zones: [
+      { id: 'z-07-01', name: 'ZONA 1', description: 'Descripción pendiente.', photos: [] },
+      { id: 'z-07-02', name: 'ZONA 2', description: 'Descripción pendiente.', photos: [] },
+      { id: 'z-07-03', name: 'ZONA 3', description: 'Descripción pendiente.', photos: [] }
+    ]
+  },
+  {
+    id: 'area-08',
+    title: 'ARK',
+    description: 'El capítulo final. Los Archivos, el Repositorio de Bioardas y el enfrentamiento definitivo con el jefe final. Todo lo que has aprendido se pondrá a prueba aquí. No hay vuelta atrás.',
+    coverImage: '',
+    zones: [
+      { id: 'z-08-01', name: 'ZONA 1', description: 'Descripción pendiente.', photos: [] },
+      { id: 'z-08-02', name: 'ZONA 2', description: 'Descripción pendiente.', photos: [] },
+      { id: 'z-08-03', name: 'ZONA 3', description: 'Descripción pendiente.', photos: [] }
     ]
   }
 ];
