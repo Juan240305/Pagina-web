@@ -387,10 +387,10 @@ async function handleRegister(e) {
   // Notificar al servidor de Discord
   sendDiscordNotification(`🧟 **Nuevo operativo registrado:** ${name} | ${email}`);
 
-  showMainContent();
-
   btnText.style.display   = 'inline';
   btnLoader.style.display = 'none';
+
+  triggerDoorTransition();
 }
 
 function showMainContent() {
@@ -406,9 +406,35 @@ function showMainContent() {
   initScrollReveal();
 }
 
+// ── Transición puerta Umbrella ──────────────────
+// Cierra los paneles sobre el registro, intercambia
+// las pantallas y los abre para revelar la guía.
+function triggerDoorTransition() {
+  const registerScreen = document.getElementById('register-screen');
+  const doorOverlay    = document.getElementById('door-overlay');
+
+  doorOverlay.style.pointerEvents = 'all';
+  doorOverlay.classList.add('closing');
+
+  setTimeout(() => {
+    registerScreen.style.display = 'none';
+    showMainContent();
+
+    setTimeout(() => {
+      doorOverlay.classList.remove('closing');
+      setTimeout(() => {
+        doorOverlay.style.pointerEvents = 'none';
+      }, 700);
+    }, 320);
+  }, 650);
+}
+
 function handleLogout() {
   sessionStorage.removeItem('re_requiem_user');
   currentUser = null;
+  const doorOverlay = document.getElementById('door-overlay');
+  doorOverlay.classList.remove('closing');
+  doorOverlay.style.pointerEvents = 'none';
   document.getElementById('register-screen').style.display = 'flex';
   document.getElementById('main-content').classList.add('hidden');
   document.getElementById('register-form').reset();
@@ -469,6 +495,15 @@ function openAreaModal(area, areaNumber) {
   modal.classList.remove('hidden');
   modal.scrollTop = 0;
   document.body.style.overflow = 'hidden';
+
+  playScanEffect();
+}
+
+function playScanEffect() {
+  const el = document.createElement('div');
+  el.className = 'zone-scan-overlay';
+  document.body.appendChild(el);
+  el.addEventListener('animationend', () => el.remove(), { once: true });
 }
 
 function closeAreaModal() {

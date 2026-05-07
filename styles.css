@@ -34,6 +34,10 @@ body {
   line-height: 1.6;
   overflow-x: hidden;
   cursor: default;
+  background-image:
+    linear-gradient(rgba(200,0,30,0.022) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(200,0,30,0.022) 1px, transparent 1px);
+  background-size: 60px 60px;
 }
 
 /* ── Scrollbar ── */
@@ -1077,6 +1081,113 @@ body {
 @keyframes page-reveal {
   from { opacity: 0; }
   to   { opacity: 1; }
+}
+
+/* ══════════════════════════════════════════
+   ANIMACIÓN — PUERTA UMBRELLA
+   Dos paneles metálicos que se cierran sobre
+   la pantalla de registro y se abren para
+   revelar la guía principal.
+══════════════════════════════════════════ */
+#door-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9990;
+  display: flex;
+  pointer-events: none;
+}
+
+.door-panel {
+  width: 50%;
+  height: 100%;
+  background: #080808;
+  position: relative;
+  transition: transform 0.65s cubic-bezier(0.77, 0, 0.175, 1);
+  overflow: hidden;
+}
+
+.door-panel::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent 0px,
+    transparent 18px,
+    rgba(255,255,255,0.018) 18px,
+    rgba(255,255,255,0.018) 20px
+  );
+  pointer-events: none;
+}
+
+.door-left  { transform: translateX(-100%); }
+.door-right { transform: translateX(100%); }
+
+.door-left::after,
+.door-right::after {
+  content: '';
+  position: absolute;
+  top: 0; bottom: 0;
+  width: 2px;
+  background: var(--red);
+  box-shadow: 0 0 16px 6px rgba(200,0,30,0.7);
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+.door-left::after  { right: 0; }
+.door-right::after { left: 0; }
+
+.door-logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 72px;
+  height: 72px;
+  z-index: 1;
+  filter: drop-shadow(0 0 24px rgba(200,0,30,0.9));
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  pointer-events: none;
+}
+
+#door-overlay.closing .door-left  { transform: translateX(0); }
+#door-overlay.closing .door-right { transform: translateX(0); }
+#door-overlay.closing .door-left::after,
+#door-overlay.closing .door-right::after { opacity: 1; }
+#door-overlay.closing .door-logo { opacity: 1; }
+
+/* ══════════════════════════════════════════
+   ANIMACIÓN — LÍNEAS DE ACCESO A ZONA
+   Barrido horizontal de líneas rojas al
+   abrir el modal de un área. Puramente
+   decorativo, no bloquea contenido.
+══════════════════════════════════════════ */
+@keyframes scanSweep {
+  0%   { left: -100%; opacity: 0.9; }
+  65%  { opacity: 0.7; }
+  100% { left: 100%; opacity: 0; }
+}
+
+.zone-scan-overlay {
+  position: fixed;
+  top: 0; bottom: 0;
+  left: -100%;
+  width: 200%;
+  pointer-events: none;
+  z-index: 600;
+  background: repeating-linear-gradient(
+    90deg,
+    transparent 0px,
+    transparent 56px,
+    rgba(200, 0, 30, 0.2) 56px,
+    rgba(200, 0, 30, 0.2) 60px,
+    transparent 60px,
+    transparent 68px,
+    rgba(200, 0, 30, 0.08) 68px,
+    rgba(200, 0, 30, 0.08) 70px
+  );
+  animation: scanSweep 0.45s ease-out forwards;
 }
 
 /* ══════════════════════════════════════════
