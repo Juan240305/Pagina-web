@@ -7,9 +7,9 @@
 // CONFIGURACIÓN EMAILJS
 // Reemplaza con tus credenciales de emailjs.com
 // ──────────────────────────────────────────────
-const EMAILJS_PUBLIC_KEY  = 'TU_PUBLIC_KEY';
-const EMAILJS_SERVICE_ID  = 'TU_SERVICE_ID';
-const EMAILJS_TEMPLATE_ID = 'Jady5h9Ss2Q6f6y_W';
+const EMAILJS_PUBLIC_KEY  = 'Jady5h9Ss2Q6f6y_W';
+const EMAILJS_SERVICE_ID  = 'service_kwl0sk9';
+const EMAILJS_TEMPLATE_ID = 'template_e27mswe';
 
 // ──────────────────────────────────────────────
 // CONFIGURACIÓN DISCORD WEBHOOK
@@ -373,7 +373,8 @@ async function handleRegister(e) {
 
   try {
     await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, {
-      user_name:  name,
+      from_name:  name,
+      name:       name,
       user_email: email,
       message:    `${name} se ha registrado en la Guía de Resident Evil: Requiem.`
     });
