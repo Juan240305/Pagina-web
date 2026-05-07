@@ -499,14 +499,15 @@ function openAreaModal(area, areaNumber) {
   playScanEffect();
 }
 
-function playScanEffect() {
+function playScanEffect(reverse = false) {
   const el = document.createElement('div');
-  el.className = 'zone-scan-overlay';
+  el.className = 'zone-scan-overlay' + (reverse ? ' reverse' : '');
   document.body.appendChild(el);
   el.addEventListener('animationend', () => el.remove(), { once: true });
 }
 
 function closeAreaModal() {
+  playScanEffect(true);
   document.getElementById('area-modal').classList.add('hidden');
   document.body.style.overflow = '';
 }

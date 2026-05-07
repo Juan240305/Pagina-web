@@ -1168,6 +1168,12 @@ body {
   100% { left: 110%; opacity: 0; }
 }
 
+@keyframes diagonalSweepReverse {
+  0%   { left: 110%; opacity: 1; }
+  80%  { opacity: 0.9; }
+  100% { left: -65%; opacity: 0; }
+}
+
 .zone-scan-overlay {
   position: fixed;
   top: -10%;
@@ -1194,6 +1200,12 @@ body {
     transparent 93%
   );
   animation: diagonalSweep 0.5s cubic-bezier(0.4, 0, 0.6, 1) forwards;
+}
+
+.zone-scan-overlay.reverse {
+  left: 110%;
+  transform: skewX(15deg);
+  animation-name: diagonalSweepReverse;
 }
 
 /* ══════════════════════════════════════════
