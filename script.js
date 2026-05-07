@@ -26,86 +26,185 @@ const AREAS = [
   {
     id: 'area-01',
     title: 'WRENWOOD HOTEL',
-    description: 'El brote comienza aquí. El hotel Wrenwood y sus alrededores en Elbridge son el primer escenario de la catástrofe. Explora las instalaciones, busca suministros y encuentra una salida antes de que todo colapse.',
-    coverImage: '',
+    description: 'Capítulo tutorial. Ritmo lento, peligros mínimos y controles explicados de forma natural. Dos secciones diferenciadas: Grace explora el hotel mientras Leon se enfrenta a las calles infestadas de Elbridge.',
+    coverImage: 'img/Capitulo1.webp',
     zones: [
-      { id: 'z-01-01', name: 'ZONA 1', description: 'Descripción pendiente.', photos: [] },
-      { id: 'z-01-02', name: 'ZONA 2', description: 'Descripción pendiente.', photos: [] },
-      { id: 'z-01-03', name: 'ZONA 3', description: 'Descripción pendiente.', photos: [] }
+      {
+        id: 'z-01-01',
+        name: 'GRACE — HOTEL WRENWOOD',
+        description: 'Activa la linterna al entrar (D-Pad arriba). En la recepción, rota la foto de Grace para obtener la Llave Antigua que abre la habitación 204. Las Tenazas (Wire Cutters) están en la mesa de billar de la segunda planta: úsalas en la puerta del pasillo. En la habitación 204 activa el flashback e interactúa con la pintura recordada. El capítulo termina con un QTE: mantén X y muévete para liberarte. Explora con calma antes de subir, no hay vuelta atrás.',
+        photos: []
+      },
+      {
+        id: 'z-01-02',
+        name: 'LEON — ELBRIDGE',
+        description: 'Avanza siguiendo el flujo de civiles que huyen en dirección contraria. Elimina los enemigos del camino: es el momento ideal para aprender el sistema de combate. Usa el hacha (hatchet) para rematar enemigos caídos sin gastar munición — es de uso ilimitado y esencial para gestionar recursos a lo largo de todo el juego. Sigue la calle hasta la cinemática final del capítulo.',
+        photos: []
+      }
     ]
   },
   {
     id: 'area-02',
     title: 'RHODES HILL 1',
-    description: 'Primera incursión en el barrio residencial de Rhodes Hill. Aquí encontrarás a The Girl, figura clave en la narrativa. Procede con cautela: los infectados abundan en cada esquina.',
-    coverImage: '',
+    description: 'El survival horror en estado puro. Rhodes Hill es un antiguo centro psiquiátrico y el escenario más denso del juego. La mecánica central es la evasión de La Chica, un monstruo perseguidor que no puede ser eliminado. Quédate en zonas iluminadas o vendrá a por ti.',
+    coverImage: 'img/Capitulo2.webp',
     zones: [
-      { id: 'z-02-01', name: 'ZONA 1', description: 'Descripción pendiente.', photos: [] },
-      { id: 'z-02-02', name: 'ZONA 2', description: 'Descripción pendiente.', photos: [] }
+      {
+        id: 'z-02-01',
+        name: 'GRACE — CENTRO DE ATENCIÓN',
+        description: 'Grace se despierta atada en una silla. Recoge las Progress Notes y localiza la Cherub Key en un cajón cercano. Necesitas el destornillador de la caja de herramientas de la enfermería. Al entrar, La Chica rompe la pared y fuerza la huida. Regla fundamental: no corras innecesariamente, el ruido la atrae. Con el destornillador, ve a la puerta blanca junto a la estatua del caballo. Espera a que La Chica se aleje, cruza rápido, obtén el fusible y corre a la puerta metálica para escapar.',
+        photos: []
+      },
+      {
+        id: 'z-02-02',
+        name: 'LEON — PRIMERA SECCIÓN',
+        description: 'Sección de acción directa frente a un grupo de enemigos armados. Localiza al enemigo con la motosierra (chainsaw) y elimínalo primero: tiene alta resistencia pero es el objetivo prioritario. Una vez caído, recoge la motosierra y úsala para cortar el bloqueo del camino principal. Es un ítem de progresión, no un arma permanente: úsala solo en el obstáculo indicado para no desperdiciarla.',
+        photos: []
+      }
     ]
   },
   {
     id: 'area-03',
     title: 'RHODES HILL 2',
-    description: 'Segunda fase en Rhodes Hill. Debes localizar las piezas de cuarzo y acceder a la Oficina de Victor. Los puzzles ambientales cobran protagonismo y la presión no da tregua.',
-    coverImage: '',
+    description: 'El capítulo más amplio y complejo del juego. Grace debe localizar tres piezas de cuarzo (Moon, Sun y Star) en las alas Este y Oeste del Centro de Atención. Leon recorre el edificio en paralelo hacia el Despacho de Victor con combates más intensos.',
+    coverImage: 'img/Capitulo3.webp',
     zones: [
-      { id: 'z-03-01', name: 'ZONA 1', description: 'Descripción pendiente.', photos: [] },
-      { id: 'z-03-02', name: 'ZONA 2', description: 'Descripción pendiente.', photos: [] },
-      { id: 'z-03-03', name: 'ZONA 3', description: 'Descripción pendiente.', photos: [] }
+      {
+        id: 'z-03-01',
+        name: 'GRACE — ALA OESTE',
+        description: 'Grace comienza con el revólver de Leon pero con una sola bala: resérvala para emergencias. En la Oficina de Guardia hay una máquina de escribir para guardar. La pulsera ID Wristband Nivel 1 abre las puertas del Ala Oeste. El cuarzo Moon está en la Oficina del Chairman: resuelve el puzle de objetos de la sala. Deposita en el cofre lo que no necesites antes de continuar hacia el Ala Este.',
+        photos: []
+      },
+      {
+        id: 'z-03-02',
+        name: 'GRACE — ALA ESTE Y APERTURA',
+        description: 'El Ala Este requiere una pulsera ID de nivel superior. Explora la Sala de Examinación y el Laboratorio de Sangre. El cuarzo Sun está en la Oficina del Investigador Principal (segunda planta). Código de la caja fuerte: 30-derecha, 10-izquierda, 50-derecha (Insanity: 50, 30, 90). El cuarzo Star se obtiene en el Ático (3ª planta) — es missable. Con las tres piezas, vuelve al Salón Central y colócalas en la puerta.',
+        photos: []
+      },
+      {
+        id: 'z-03-03',
+        name: 'LEON — DESPACHO DE VICTOR',
+        description: 'Leon avanza hacia el Despacho de Victor Gideon en el Ala Oeste. Usa el frigorífico y las palancas del entorno para crear ventaja táctica. El monstruo Tyrant al final de esta sección requiere varias cargas del Requiem más disparos de pistola para caer. Mantén la distancia y aprovecha los marcos de puertas estrechos: el enemigo no puede flanquearte en espacios angostos.',
+        photos: []
+      }
     ]
   },
   {
     id: 'area-04',
     title: 'RHODES HILL 3',
-    description: 'Descenso al sótano de Rhodes Hill. La oscuridad y los espacios cerrados elevan la tensión al máximo. Gestiona bien tu munición y ten siempre una ruta de escape en mente.',
-    coverImage: '',
+    description: 'Descenso al sótano. Zona completamente lineal, oscura y hostil con celdas cuyos ocupantes pueden romper los barrotes si te acercas. Grace busca a Emily mientras Leon proporciona cobertura desde el exterior.',
+    coverImage: 'img/Capitulo4.webp',
     zones: [
-      { id: 'z-04-01', name: 'ZONA 1', description: 'Descripción pendiente.', photos: [] },
-      { id: 'z-04-02', name: 'ZONA 2', description: 'Descripción pendiente.', photos: [] }
+      {
+        id: 'z-04-01',
+        name: 'GRACE — EL SÓTANO',
+        description: 'Activa la linterna de inmediato. El sótano funciona con Joint Plugs: recógelos y colócalos en paneles de distribución para abrir puertas y encender zonas. Avanza por los laterales del pasillo para ignorar a los enemigos en celdas. El agua electrificada en el suelo es letal: rodea los charcos siempre que sea posible. Objetivo final: liberar a Emily activando todos los paneles de energía. Una vez activos, corre al ascensor antes de que La Chica intervenga.',
+        photos: []
+      },
+      {
+        id: 'z-04-02',
+        name: 'LEON — COBERTURA Y ESCAPE',
+        description: 'Leon proporciona cobertura mientras Grace transporta a Emily. Despeja el camino desde posición ventajosa disparando a los enemigos que bloquean la ruta de huida. Apunta siempre a la cabeza para conservar munición y prioriza los zombis directamente en el trayecto de Grace. Sección breve pero que exige precisión y buena gestión de los recursos disponibles.',
+        photos: []
+      }
     ]
   },
   {
     id: 'area-05',
     title: 'RHODES HILL 4',
-    description: 'Tramo final en Rhodes Hill. El helipuerto y la Planta de Tratamiento de Agua son los objetivos. La infección ha mutado y los enemigos son más agresivos que nunca.',
-    coverImage: '',
+    description: 'El capítulo final de Rhodes Hill. Exteriores e zona industrial subterránea. La Chica regresa más agresiva y esta vez Grace tiene el Requiem para contrarrestarla. Recoge las balas 12.7x55mm antes de la Planta de Tratamiento: las necesitarás.',
+    coverImage: 'img/Capitulo5.webp',
     zones: [
-      { id: 'z-05-01', name: 'ZONA 1', description: 'Descripción pendiente.', photos: [] },
-      { id: 'z-05-02', name: 'ZONA 2', description: 'Descripción pendiente.', photos: [] },
-      { id: 'z-05-03', name: 'ZONA 3', description: 'Descripción pendiente.', photos: [] }
+      {
+        id: 'z-05-01',
+        name: 'GRACE — HELIPUERTO',
+        description: 'Deja a Emily con Harry en el helipuerto y explora la casa adyacente. La Suite VIP tiene un puzle con objetos del entorno que debes resolver para obtener un ítem clave. Recoge el Visitor Record del armario junto a las botellas de vino antes de entrar al laboratorio. Más allá del patio hay un laboratorio privado accesible con la pulsera ID de mayor nivel, con documentos y objetos de mejora.',
+        photos: []
+      },
+      {
+        id: 'z-05-02',
+        name: 'LEON — FRANCOTIRADOR',
+        description: 'Leon despliega su rifle desde las azoteas para cubrir a Grace en los exteriores. Elimina los grupos de zombis en el jardín antes de que alcancen a Grace. Hay un Mr. Raccoon Memoriam sobre uno de los postes del jardín, visible desde la posición del rifle. No abandones la posición hasta que Grace haya cruzado al otro lado.',
+        photos: []
+      },
+      {
+        id: 'z-05-03',
+        name: 'GRACE — PLANTA DE TRATAMIENTO',
+        description: 'El momento más tenso del capítulo. Activa tres distribuidores de energía mientras La Chica patrulla el área central. Los puntos de luz la aturden temporalmente pero se queman tras el primer uso: resérvalos para momentos críticos. Espera a que La Chica se aleje antes de avanzar por el camino que deja libre. Si te atrapa en el Crank Lever, dispara el Requiem para aturdirla (dos disparos en Insanity). Con los tres interruptores activos, usa los Roof Hatch Controls: la luz solar la debilita definitivamente.',
+        photos: []
+      }
     ]
   },
   {
     id: 'area-06',
     title: 'EAST RACCOON CITY',
-    description: 'Las calles del este de Raccoon City están tomadas. Navega entre vehículos abandonados, edificios derrumbados y hordas de infectados en un entorno urbano devastado.',
-    coverImage: '',
+    description: 'El capítulo más largo de Leon. Espacio abierto, combate intenso y varias zonas de misión entrelazadas. El campamento BSAA es el hub central: vuelve siempre que necesites gestionar inventario o comprar mejoras. Leon no tiene cofre en campo: lo que llevas es lo que tienes.',
+    coverImage: 'img/Capitulo6.webp',
     zones: [
-      { id: 'z-06-01', name: 'ZONA 1', description: 'Descripción pendiente.', photos: [] },
-      { id: 'z-06-02', name: 'ZONA 2', description: 'Descripción pendiente.', photos: [] }
+      {
+        id: 'z-06-01',
+        name: 'ORIENTACIÓN & CAMPAMENTO BSAA',
+        description: 'Al llegar, recoge el Raccoon City Incident Newspaper junto a unas bolsas de basura. Hay un Mr. Raccoon Memoriam detrás del mostrador del Café Oasis. El campamento BSAA tiene máquina de escribir, cofre y tienda de mejoras. Prioriza munición, granadas y hierbas verdes al comprar. Usa los binoculares desde la azotea del almacén para localizar los tres puntos de interés del mapa.',
+        photos: []
+      },
+      {
+        id: 'z-06-02',
+        name: 'ALMACÉN & ARAÑA GIGANTE',
+        description: 'En el Almacén Logístico los enemigos emergen del suelo: elimínalos, no intentes esquivarlos. El Distributor (pieza del detonador) está en la azotea. La Araña Gigante aparece al forzar la puerta giratoria del Applegate Hotel. Su punto débil está en la espalda: circula alrededor y dispara solo con ángulo trasero limpio. Las granadas y botellas de ácido son muy efectivas cuando trae refuerzos de arañas pequeñas.',
+        photos: []
+      },
+      {
+        id: 'z-06-03',
+        name: 'DETONADOR, GENERADORES & MOTO',
+        description: 'Consigue el bidón de gasolina en la gasolinera y llénalo en el surtidor del fondo (desencadena un combate amplio). Llévalo a los generadores del mapa para activar los sistemas del detonador. En el edificio volcado (Willis Tower derribado) la navegación es peculiar: busca tablones con cinta amarilla y dispáralos para abrirte paso. El capítulo termina con una persecución en moto: esquiva obstáculos y dispara a los enemigos montados de los laterales.',
+        photos: []
+      }
     ]
   },
   {
     id: 'area-07',
     title: 'RACCOON CITY CENTER',
-    description: 'El centro de la ciudad alberga la comisaría del RPD y el Orfanato. Dos localizaciones cargadas de historia y peligro. Cada sala puede esconder tanto recursos como amenazas letales.',
-    coverImage: '',
+    description: 'El capítulo más nostálgico. Leon visita el RPD por primera vez desde RE2. Grace explora el Orfanato con recursos muy limitados. Prioriza siempre la evasión sobre el combate en el Orfanato: cada bala cuenta para el tramo final del juego.',
+    coverImage: 'img/Capitulo7.webp',
     zones: [
-      { id: 'z-07-01', name: 'ZONA 1', description: 'Descripción pendiente.', photos: [] },
-      { id: 'z-07-02', name: 'ZONA 2', description: 'Descripción pendiente.', photos: [] },
-      { id: 'z-07-03', name: 'ZONA 3', description: 'Descripción pendiente.', photos: [] }
+      {
+        id: 'z-07-01',
+        name: 'LEON — EL RPD',
+        description: 'Al entrar al centro, gira al oeste para encontrar un Mr. Raccoon Memoriam sobre los escombros. En el RPD: el Mechanic Jack está en la biblioteca de la segunda planta (ítem clave) y hay un Mr. Raccoon Memoriam en el lado sureste de la estantería grande. Antes de usar el ascensor, recoge todo: algunas zonas quedan inaccesibles después. El Tyrant no puede derrotarse aquí: corre al Vestíbulo Principal alternando extremos del pasillo hasta la zona de prensa. Usa el Requiem para aturdirlo.',
+        photos: []
+      },
+      {
+        id: 'z-07-02',
+        name: 'GRACE — EL ORFANATO',
+        description: 'Sección de survival horror con munición muy escasa. El Orfanato está distribuido en varias plantas con habitaciones intercomunicadas y archivos importantes sobre el pasado de Grace. Los enemigos tienen comportamientos distintos a los zombis habituales: obsérvalos antes de actuar. La exploración es más libre que en el Centro de Atención pero igualmente tensa. Objetivo: encontrar información sobre el pasado de Grace y avanzar hasta reunirse con Leon.',
+        photos: []
+      }
     ]
   },
   {
     id: 'area-08',
     title: 'ARK',
-    description: 'El capítulo final. Los Archivos, el Repositorio de Bioardas y el enfrentamiento definitivo con el jefe final. Todo lo que has aprendido se pondrá a prueba aquí. No hay vuelta atrás.',
-    coverImage: '',
+    description: 'El capítulo final. Instalación secreta de Umbrella bajo las ruinas de Raccoon City. Más corto que los anteriores pero las decisiones aquí determinan el final que obtienes. Recarga todas las armas antes de bajar: no hay respiro entre secuencias de acción.',
+    coverImage: 'img/Capitulo8.webp',
     zones: [
-      { id: 'z-08-01', name: 'ZONA 1', description: 'Descripción pendiente.', photos: [] },
-      { id: 'z-08-02', name: 'ZONA 2', description: 'Descripción pendiente.', photos: [] },
-      { id: 'z-08-03', name: 'ZONA 3', description: 'Descripción pendiente.', photos: [] }
+      {
+        id: 'z-08-01',
+        name: 'PRIMERAS SALAS',
+        description: 'ARK comienza de forma lineal. La sala de personal a la izquierda funciona como punto de guardado con máquina de escribir. La progresión principal está a la derecha. Al bajar las escaleras encontrarás la sala de servidores y el terminal que activa la siguiente fase. Recarga todas las armas antes de continuar.',
+        photos: []
+      },
+      {
+        id: 'z-08-02',
+        name: 'EXPLORACIÓN PROFUNDA',
+        description: 'Secciones alternadas entre Leon y Grace que convergen hacia el núcleo. Leon enfrenta una horda al recoger el Animus Orb: usa cócteles molotov y botellas de ácido para controlar la sala. Coloca el orbe en la puerta roja para acceder al Sistema Central de Refinado. Grace desciende a la cámara central donde está Elpis, culminando en el momento de decisión del juego.',
+        photos: []
+      },
+      {
+        id: 'z-08-03',
+        name: 'DECISIÓN FINAL & JEFE',
+        description: 'La única decisión narrativa del juego. Destruir Elpis: final malo, Leon muere. Liberar Elpis (escribe HOPE en el terminal): final canónico y batalla final. Puedes ver ambos sin perder progreso. Jefe Final Victor Gideon/Nemesis: dispara a los puntos luminosos de su cuerpo. En la segunda fase retrocede cuando salte a la plataforma y espera a que baje. Golpe final con el Requiem apuntando al núcleo central expuesto. Los objetos de la arena se regeneran entre fases.',
+        photos: []
+      }
     ]
   }
 ];
