@@ -16,7 +16,7 @@ const EMAILJS_TEMPLATE_ID = 'template_e27mswe';
 // En Discord: Canal → Configuración → Integraciones → Crear Webhook
 // Copia la URL generada y pégala aquí
 // ──────────────────────────────────────────────
-const DISCORD_WEBHOOK_URL = 'TU_DISCORD_WEBHOOK_URL';
+const DISCORD_WEBHOOK_URL = 'https://discordapp.com/api/webhooks/1501999022292992081/wd5_Kiaq4Z2VBMQJjdicTk1EpTvCoRy6hjkQCbdqvnut_Q3y2S47SbaeeZ-TGBUokExo';
 
 // ──────────────────────────────────────────────
 // DATOS — ÁREAS Y ZONAS
